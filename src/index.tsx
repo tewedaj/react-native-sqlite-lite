@@ -17,6 +17,30 @@ const SqliteLite = NativeModules.SqliteLite
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return SqliteLite.multiply(a, b);
+
+
+
+export function createDatabase(databaseName: string, callback: (result: string,ERR: string) => void): void {
+
+  SqliteLite.createDatabase(databaseName, callback);
 }
+
+export function createTable(databaseName: string, tableName: string, query: string, callback: (result: string) => void): void {
+  
+    SqliteLite.createTable(databaseName,tableName, query, callback);
+  }
+
+export function insertQuery(databaseName: string, query: string, callback: (result: string) => void): void {
+  
+    SqliteLite.insertQuery(databaseName, query, callback);
+  }
+
+export function selectQuery(databaseName: string, query: string, callback: (result: string) => void): void {
+    
+      SqliteLite.selectQuery(databaseName, query, callback);
+    }
+
+
+
+
+

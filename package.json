@@ -1,6 +1,6 @@
 {
   "name": "react-native-sqlite-lite",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "sqlite pipline with java",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
